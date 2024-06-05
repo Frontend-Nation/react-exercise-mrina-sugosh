@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import './TinyEditor.css';
 import { Editor } from '@tinymce/tinymce-react';
 
