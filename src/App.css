@@ -1,0 +1,17 @@
+#app {
+  display: inline-flex !important;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.editorInput {
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+}
