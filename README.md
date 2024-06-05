@@ -26,4 +26,4 @@ npm run dev
 
 ## Final Demo
 
-![Finished App](https://prod-files-secure.s3.us-west-2.amazonaws.com/a245d138-5f90-448f-b38b-31a6d3da3100/a48ed4e1-0e4b-4bdc-a935-2f3e4aa0c6fc/Untitled.png)
+<img width="1492" alt="image" src="https://github.com/Frontend-Nation/react-exercise-mrina-sugosh/assets/25342475/6e077418-0fd3-4212-8430-c336e304518e">
