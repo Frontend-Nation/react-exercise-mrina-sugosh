@@ -9,8 +9,12 @@ export default function TinyEditor() {
       apiKey='TINY_MCE_API_KEY'
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        plugins: 'link image code markdown math a11ychecker tinymcespellchecker wordcount autocorrect fullscreen powerpaste preview',
+        toolbar: 'undo redo | spellchecker language math spellcheckdialog a11ycheck wordcount | inserttemplate addtemplate | aidialog aishortcuts | bold italic | alignleft aligncenter alignright | addcomment showcomments | fullscreen preview',
+        powerpaste_allow_local_images: true,
+        powerpaste_word_import: 'prompt',
+        powerpaste_html_import: 'prompt',
+        powerpaste_googledocs_imports: 'prompt',
       }}
       initialValue="Welcome to TinyMCE!"
     />
