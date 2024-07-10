@@ -6,11 +6,11 @@ export default function TinyEditor() {
   const editorRef = useRef(null);
   return (
     <Editor
-      apiKey='TINY_MCE_API_KEY'
+      apiKey='TINYMCE_API_KEY'
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        plugins: 'advcode code editimage fullscreen preview wordcount math',
+        toolbar: 'undo redo blocks |  bold italic underline | strikethrough forecolor backcolor align subscript superscript | charmap blockquote | fullscreen preview math',
       }}
       initialValue="Welcome to TinyMCE!"
     />
