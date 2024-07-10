@@ -42,9 +42,10 @@ export default function TinyEditor() {
       apiKey='TINYMCE_API_KEY'
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
-        plugins: 'advcode code editimage fullscreen preview wordcount math linkchecker lists markdown powerpaste typography charmap checklist emoticons footnotes image link media mediaembed mergetags table tableofcontents advtemplate exportpdf exportword importword',
-        toolbar: 'exportpdf exportword importword | undo redo blocks | inserttemplate | bold italic underline | strikethrough forecolor backcolor align subscript superscript | bullist numlist checklist link  | typography charmap blockquote | image media math | footnotes mergetags table charmap emoticons | code fullscreen preview',
+        plugins: 'a11ychecker tinymcespellchecker advcode code editimage fullscreen preview wordcount math linkchecker lists markdown powerpaste typography charmap checklist emoticons footnotes image link media mediaembed mergetags table tableofcontents advtemplate exportpdf exportword importword',
+        toolbar: 'exportpdf exportword importword | undo redo blocks | inserttemplate | a11ycheck spellcheckdialog | bold italic underline | strikethrough forecolor backcolor align subscript superscript | bullist numlist checklist link  | typography charmap blockquote | image media math | footnotes mergetags table charmap emoticons | code fullscreen preview',
         contextmenu: 'advtemplate',
+        spellchecker_language: 'en',
         advtemplate_templates,
         exportpdf_service_url: "https://exportpdf.converter.tiny.cloud/v1/convert",
 	      exportword_service_url: "https://exportdocx.converter.tiny.cloud/v1/convert",
