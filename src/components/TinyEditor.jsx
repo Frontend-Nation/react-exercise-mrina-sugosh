@@ -39,13 +39,16 @@ export default function TinyEditor() {
   ];
   return (
     <Editor
-      apiKey='TINYMCE_API_KEY'
+      apiKey='jv324dncax6j46m2cpy54igo82jhhziwdpmurp3x84e5kyuq'
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
-        plugins: 'advcode code editimage fullscreen preview wordcount math linkchecker lists markdown powerpaste typography charmap checklist emoticons footnotes image link media mediaembed mergetags table tableofcontents advtemplate',
-        toolbar: 'undo redo blocks | inserttemplate | bold italic underline | strikethrough forecolor backcolor align subscript superscript | bullist numlist checklist link  | typography charmap blockquote | image media math | footnotes mergetags table charmap emoticons | code fullscreen preview',
+        plugins: 'advcode code editimage fullscreen preview wordcount math linkchecker lists markdown powerpaste typography charmap checklist emoticons footnotes image link media mediaembed mergetags table tableofcontents advtemplate exportpdf exportword importword',
+        toolbar: 'exportpdf exportword importword | undo redo blocks | inserttemplate | bold italic underline | strikethrough forecolor backcolor align subscript superscript | bullist numlist checklist link  | typography charmap blockquote | image media math | footnotes mergetags table charmap emoticons | code fullscreen preview',
         contextmenu: 'advtemplate',
         advtemplate_templates,
+        exportpdf_service_url: "https://exportpdf.converter.tiny.cloud/v1/convert",
+	      exportword_service_url: "https://exportdocx.converter.tiny.cloud/v1/convert",
+	      importword_service_url: "https://importdocx.converter.tiny.cloud/v2/convert/docx-html",
       }}
       initialValue="Welcome to TinyMCE!"
       
