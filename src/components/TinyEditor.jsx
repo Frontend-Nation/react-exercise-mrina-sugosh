@@ -39,7 +39,7 @@ export default function TinyEditor() {
   ];
   return (
     <Editor
-      apiKey='TINYMCE_API_KEY'
+      apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
         plugins: 'a11ychecker tinymcespellchecker advcode code editimage fullscreen preview wordcount math linkchecker lists markdown powerpaste typography charmap checklist emoticons footnotes image link media mediaembed mergetags table tableofcontents advtemplate exportpdf exportword importword',
