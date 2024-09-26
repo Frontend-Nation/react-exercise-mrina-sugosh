@@ -6,7 +6,7 @@ export default function TinyEditor() {
   const editorRef = useRef(null);
   return (
     <Editor
-      apiKey='TINMCE_API_KEY'
+      apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
         plugins: 'advcode code image editimage fullscreen preview wordcount math linkchecker lists markdown powerpaste typography',
