@@ -3,7 +3,7 @@ import './TinyEditor.css';
 import { Editor } from '@tinymce/tinymce-react';
 
 export default function TinyEditor() {
-  const api_key = 'OPENAI_API_KEY';
+  const api_key = import.meta.env.VITE_OPENAI_API_KEY;
   const fetchApi = import("https://unpkg.com/@microsoft/fetch-event-source@2.0.1/lib/esm/index.js").then(module => module.fetchEventSource);
   const ai_request = (request, respondWith) => {
     respondWith.stream((signal, streamMessage) => {
@@ -71,8 +71,6 @@ export default function TinyEditor() {
               throw new Error(`${data.error.type}: ${data.error.message}`);
             }
           }
-        } else {
-          throw new Error('Failed to communicate with the ChatGPT API');
         }
       };
   
@@ -154,7 +152,7 @@ export default function TinyEditor() {
   ];
   return (
     <Editor
-      apiKey='TINYMCE_API_KEY'
+      apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
         plugins: 'ai a11ychecker tinymcespellchecker advcode code editimage fullscreen preview wordcount math linkchecker lists markdown powerpaste typography charmap checklist emoticons footnotes image link media mediaembed mergetags table tableofcontents advtemplate exportpdf exportword importword',
